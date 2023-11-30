@@ -1,0 +1,25 @@
+{% if section.settings.icon != blank %}
+  <div class="loop__content">{{ section.settings.icon }}</div>
+{% endif %}
+{% schema %}
+{
+	"name": "Home Ticker",
+	"tag": "section",
+	"class": "loop",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+            "type": "textarea",
+            "id": "icon",
+            "label": "Icon SVG"
+        }
+	],
+	"presets": [
+		{
+			"name": "Home Ticker"
+		}
+	]
+}
+{% endschema %}

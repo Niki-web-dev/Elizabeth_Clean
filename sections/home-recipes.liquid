@@ -1,0 +1,121 @@
+<section class="recipes">
+  {% if section.settings.title != blank %}
+    <div class="container px-75">
+      <div class="recipes__container">
+        <div class="recipes__title">
+          <h2 class="color-blue">{{ section.settings.title }}</h2>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if section.blocks != blank %}
+    <div class="container noodles__container" style="margin-left: 0px;">
+      <div class="recipes__noodles">
+        {% for block in section.blocks %}
+          <div class="recipes__recipe">
+            {% if block.settings.image != blank %}
+              <div class="recipes__img">
+                {% if block.settings.button_link != blank %}<a href="{{ block.settings.button_link }}">{% endif %}
+                {{
+                    block.settings.image
+                    | image_url: width: 480
+                    | image_tag:
+                        loading: 'lazy',
+                        class: 'img rounded-30',
+                        width: '480',
+                        height: '410'
+                }}
+                {% if block.settings.button_link != blank %}</a>{% endif %}
+              </div>
+            {% endif %}
+            <div class="recipes__info">
+              {% if block.settings.title != blank %}
+                <p class="recipes__name">{% if block.settings.button_link != blank %}<a href="{{ block.settings.button_link }}">{% endif %}{{ block.settings.title }}{% if block.settings.button_link != blank %}</a>{% endif %}</p>
+              {% endif %}
+              {% if block.settings.time != blank %}
+                <div class="recipes__time">
+                  <div class="recipes__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.5 8H11.1667V9H7.5L7.5 5.33333H8.5L8.5 8Z" fill="#2C2C2C"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8.5C1.5 4.91015 4.41015 2 8 2C11.5899 2 14.5 4.91015 14.5 8.5C14.5 12.0899 11.5899 15 8 15C4.41015 15 1.5 12.0899 1.5 8.5ZM8 3C4.96243 3 2.5 5.46243 2.5 8.5C2.5 11.5376 4.96243 14 8 14C11.0376 14 13.5 11.5376 13.5 8.5C13.5 5.46243 11.0376 3 8 3Z" fill="#2C2C2C"></path>
+                    </svg></div>
+                  <p class="recipes__name font-sans">{{ block.settings.time }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+        <div class="recipes__button">
+          <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+        </div>
+      {% endif %}
+    </div>
+    <div class="recipes__scroll-bar">
+      <div class="recipes__scroll-btn"></div>
+    </div>
+    <div class="hidden w-embed w-script">
+    </div>
+  {% endif %}
+</section>
+{% schema %}
+{
+	"name": "Home Recipes",
+	"tag": "section",
+	"class": "recipes",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+    "blocks": [
+        {
+            "type": "recipes",
+            "name": "Recipes",
+            "settings": [
+                {
+        			"type": "image_picker",
+        			"id": "image",
+        			"label": "Image"
+        		},
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Text"
+                },
+                {
+                    "type": "text",
+                    "id": "time",
+                    "label": "Time"
+                },
+        		{
+        			"type": "url",
+        			"id": "button_link",
+        			"label": "Button Link"
+        		}
+            ]
+        }
+    ],
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"label": "Button Label",
+			"default": "More Recipes"
+		}
+	],
+	"presets": [
+		{
+			"name": "Home Recipes"
+		}
+	]
+}
+{% endschema %}

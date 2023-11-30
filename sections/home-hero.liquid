@@ -1,0 +1,95 @@
+<div class="hero__bg">{% render 'wave-icon' %}</div> 
+<div class="container relative">
+  {% if section.settings.image != blank %}
+    <div class="hero__img">
+      {{
+          section.settings.image
+          | image_url: width: 920
+          | image_tag:
+              loading: 'lazy',
+              width: '920',
+              height: '675'
+      }}
+    </div>
+  {% endif %}
+  <div class="hero__content">
+    <div class="hero__wrapper">
+      {% if section.settings.title != blank or section.settings.subtitle != blank or section.settings.subsubtitle != blank %}
+        <h1 class="hero__title">
+          {% if section.settings.title != blank %}
+            {{ section.settings.title }} 
+          {% endif %}
+          {% if section.settings.subtitle != blank %}
+            <span class="color-f6">{{ section.settings.subtitle }}</span>
+          {% endif %}
+          {% if section.settings.subsubtitle != blank %}
+            <br>{{ section.settings.subsubtitle }}
+          {% endif %}
+        </h1>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p class="hero__subtitle color-f2">{{ section.settings.text }}</p>
+      {% endif %}
+      {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="rounded__text">
+  <div class="rotate-block">{% render 'rounded-text' %}</div>
+  <div class="arrow">{% render 'arrow' %}</div>
+</div>
+{% schema %}
+{
+	"name": "Home Hero",
+	"tag": "section",
+	"class": "hero",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "SubTitle"
+		},
+        {
+			"type": "text",
+			"id": "subsubtitle",
+			"label": "SubSubTitle"
+		},
+		{
+			"type": "textarea",
+			"id": "text",
+			"label": "Text"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"label": "Button Label",
+			"default": "Noodles store"
+		}
+	],
+	"presets": [
+		{
+			"name": "Home Hero"
+		}
+	]
+}
+{% endschema %}

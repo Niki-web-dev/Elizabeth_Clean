@@ -1,0 +1,116 @@
+<div class="footer__bg">{% render "advantages-lines" %}</div>
+{% if section.settings.background != blank %}
+  <div class="advatages__main-bg">
+    {% if section.settings.background != blank or section.settings.image != blank %}
+      {{
+          section.settings.background
+          | image_url: width: 1060
+          | image_tag:
+              loading: 'lazy',
+              class: 'advantages__plate',
+              width: '1060',
+              height: '780'
+      }}
+    {% endif %}
+    {% if section.settings.image != blank %}
+      <div class="plate">
+        {{
+            section.settings.image
+            | image_url: width: 468
+            | image_tag:
+                loading: 'lazy',
+                class: 'img',
+                width: '468',
+                height: '468'
+        }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+<div class="advantages__bg"></div>
+<div class="container">
+  <div class="advantages__container">
+    {% if section.settings.title != blank %}
+      <div class="advatages__title">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+    {% endif %}
+    {% if section.blocks != blank %}
+      <div class="advantages__conten">
+        <div class="advatages__flex first">
+          {% assign i = 0 %}
+          {% assign j = 0 %}
+          {% for block in section.blocks %}
+            <div class="advatages__wrapper">
+              {% if block.settings.icon != blank %}
+                <div class="advantages__icon w-embed">
+                  {{ block.settings.icon }}
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <p class="advatages__text">{{ block.settings.title }}</p>
+              {% endif %}
+            </div>
+            {% assign i = i | plus: 1 %}
+            {% assign j = i | modulo: 2 %}
+            {% if j == 0 and i < section.blocks.size %}
+              </div>
+              <div class="advatages__flex">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+	"name": "Home Advantages",
+	"tag": "section",
+	"class": "advantages",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+    "blocks": [
+        {
+            "type": "additionals",
+            "name": "Additionals",
+            "limit": 4,
+            "settings": [
+                {
+        			"type": "textarea",
+        			"id": "icon",
+        			"label": "Icon SVG"
+        		},
+                {
+                    "type": "textarea",
+                    "id": "title",
+                    "label": "Text"
+                }
+            ]
+        }
+    ],
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "background",
+			"label": "Background"
+		},
+        {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		}
+	],
+	"presets": [
+		{
+			"name": "Home Advantages"
+		}
+	]
+}
+{% endschema %}

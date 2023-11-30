@@ -1,0 +1,100 @@
+{% if section.blocks != blank %}
+  <div class="container">
+    <div class="product__grid">
+      {% for block in section.blocks %}
+        <div class="product__box">
+          {% if block.settings.image != blank or block.settings.image_hover != blank %}
+            <div class="product__img">
+              {% if block.settings.image != blank %}
+                {{
+                    block.settings.image
+                    | image_url: width: 280
+                    | image_tag:
+                        loading: 'lazy',
+                        class: 'product__main-img',
+                        width: '280',
+                        height: '280'
+                }}
+              {% endif %}
+              {% if block.settings.image_hover != blank %}
+                {{
+                    block.settings.image_hover
+                    | image_url: width: 500
+                    | image_tag:
+                        loading: 'lazy',
+                        class: 'product__second-img',
+                        width: '280',
+                        height: '280'
+                }}
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <div class="product__name">{{ block.settings.title }}</div>
+          {% endif %}
+          {% if block.settings.content != blank %}
+            <div class="product__description">{{ block.settings.content }}</div>
+          {% endif %}
+          {% if block.settings.button_link != blank and block.settings.button_label != blank %}
+            <a href="{{ block.settings.button_link }}" class="product__btn">{{ block.settings.button_label }}</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+	"name": "Home Products",
+	"tag": "section",
+	"class": "product",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+    "blocks": [
+        {
+            "type": "products",
+            "name": "Products",
+            "limit": 3,
+            "settings": [
+                {
+        			"type": "image_picker",
+        			"id": "image",
+        			"label": "Image"
+        		},
+                {
+        			"type": "image_picker",
+        			"id": "image_hover",
+        			"label": "Image Hover"
+        		},
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "content",
+                    "label": "Text"
+                },
+                {
+        			"type": "url",
+        			"id": "button_link",
+        			"label": "Button Link"
+        		},
+        		{
+        			"type": "text",
+        			"id": "button_label",
+        			"label": "Button Label",
+        			"default": "Buy"
+        		}
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Home Products"
+		}
+	]
+}
+{% endschema %}

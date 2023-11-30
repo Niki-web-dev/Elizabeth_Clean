@@ -1,0 +1,117 @@
+<div class="noodle__bg">{% render 'noodle-line' %}</div>
+<div class="container relative">
+  {% if section.settings.image_left != blank %}
+    {{
+        section.settings.image_left
+        | image_url: width: 450
+        | image_tag:
+            loading: 'lazy',
+            class: 'parsley',
+            width: '100',
+            height: '100'
+    }}
+  {% endif %}
+  {% if section.settings.image_right != blank %}
+    {{
+        section.settings.image_right
+        | image_url: width: 137
+        | image_tag:
+            loading: 'lazy',
+            class: 'mushrooms',
+            width: '137',
+            height: '100'
+    }}
+  {% endif %}
+  {% if section.settings.title != blank %}
+    <h2 class="noodle__title">{{ section.settings.title }}</h2>
+  {% endif %}
+  {% if section.blocks != blank %}
+    <div class="noodle__advantage-wrapper">
+      {% for block in section.blocks %}
+        <div class="noodle__content">
+          {% if block.settings.icon != blank %}
+            <div class="noodle__icon">{{ block.settings.icon }}</div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <p class="noodle__advantage">{{ block.settings.title }}</p>
+          {% endif %}
+          {% if block.settings.content != blank %}
+            <p class="noodle__descr">{{ block.settings.content }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+    <div class="noodle__button">
+      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+    </div>
+  {% endif %}
+</div>
+{% schema %}
+{
+	"name": "Home About",
+	"tag": "section",
+	"class": "noodle",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+    "blocks": [
+        {
+            "type": "additionals",
+            "name": "Additionals",
+            "limit": 3,
+            "settings": [
+                {
+        			"type": "textarea",
+        			"id": "icon",
+        			"label": "Icon SVG"
+        		},
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "content",
+                    "label": "Text"
+                }
+            ]
+        }
+    ],
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "image_left",
+			"label": "Image Left"
+		},
+        {
+			"type": "image_picker",
+			"id": "image_right",
+			"label": "Image Right"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"label": "Button Label",
+			"default": "Browse noodles"
+		}
+	],
+	"presets": [
+		{
+			"name": "Home About"
+		}
+	]
+}
+{% endschema %}
