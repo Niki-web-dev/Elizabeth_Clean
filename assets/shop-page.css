@@ -1,0 +1,29 @@
+.shop {
+  padding-top: 186px;
+}
+.shop__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.shop__title {
+  color: var(--blue-TUF);
+}
+.shop__tab-buttons {
+  display: flex;
+  align-items: center;
+}
+.shop__btn {
+  padding: 5px 25px;
+  font-size: var(--fs-40);
+  color: var(--blue-TUF);
+  border: 1px solid var(--blue-TUF);
+  border-radius: 24px;
+  line-height: 100%;
+  transition: color, background-color 0.5s ease;
+}
+
+.shop__btn .active {
+
+}

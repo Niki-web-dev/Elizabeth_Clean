@@ -1,0 +1,29 @@
+{{ 'shop-page.css' | asset_url | stylesheet_tag }}
+
+<section class="shop">
+    <div class="container">
+        <div class="shop__content">
+            <h1 class="shop__title">{{ section.settings.title }}</h1>
+
+            <div class="shop__tab-buttons">
+                <a href="#all" class="shop__btn">all</a>
+                <a href="#products" class="shop__btn">products</a>
+                <a href="#sets" class="shop__btn">sets</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Template Shop",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "default": "SHOP",
+            "label": "Heading text"
+        }
+    ]
+}
+{% endschema %}

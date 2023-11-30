@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "template-hero": {
+      "type": "template-hero",
+      "settings": {
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template-hero",
+    "footer"
+  ]
+}

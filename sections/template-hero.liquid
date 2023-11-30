@@ -1,0 +1,416 @@
+
+<section class="hero">
+  <div class="hero__bg">{% render 'wave-icon' %}</div> 
+
+  <div class="container relative">
+    <div class="hero__img">
+      <img src="{{ 'hero.png' | asset_img_url: '920x675' }}" alt="nuddle" loading="lazy" height="675" width="920">
+    </div>
+    <div class="hero__content">
+      <div class="hero__wrapper">
+        <h1 class="hero__title">Nutritionally <span class="color-f6">complete</span><br>instant noodles</h1>
+        <p class="hero__subtitle color-f2">Plant-based instant noodles that are healthy for you and our planet</p>
+        <a href="/" class="button">Noodles store</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rounded__text">
+    <div class="rotate-block">{% render 'rounded-text' %}</div>
+    <div class="arrow">{% render 'arrow' %}</div>
+  </div>
+</section>
+
+<section class="noodle">
+  <div class="noodle__bg">{% render 'noodle-line' %}</div>
+
+  <div class="container relative">
+    <img src="{{ 'parsley.png' | asset_img_url: '450x450' }}" alt="parsley" loading="lazy" class="parsley" width="100" height="100">
+    <img src="{{ 'mushrooms.png' | asset_img_url: '137x115' }}" alt="mushrooms" loading="lazy" class="mushrooms" width="137" height="100">
+
+    <h2 class="noodle__title">What make us better</h2>
+
+    <div class="noodle__advantage-wrapper">
+      <div class="noodle__content">
+        <div class="noodle__icon">{% render 'check-icon' %}</div>
+        <p class="noodle__advantage">Healthy</p>
+        <p class="noodle__descr">Not fried. The noodles are baked and air dried</p>
+      </div>
+      <div class="noodle__content">
+        <div class="noodle__icon">{% render 'handle-icon' %}</div>
+        <p class="noodle__advantage">Nutritious</p>
+        <p class="noodle__descr">A fortified product. High in protein in fiber</p>
+      </div>
+      <div class="noodle__content">
+        <div class="noodle__icon">{% render 'eat-icon' %}</div>
+        <p class="noodle__advantage">Easy to cook</p>
+        <p class="noodle__descr">Perfect for in between mealer & easy to cook</p>
+      </div>
+    </div>
+
+    <div class="noodle__button">
+      <a href="/" class="button">Browse noodles</a>
+    </div>
+  </div>
+</section>
+
+<section class="loop">
+  <div class="loop__content">{% render 'big-logo', class: 'big-logo' %}</div>
+</section>
+
+
+<section class="product">
+  <div class="container">
+    <div class="product__grid">
+      <div class="product__box">
+        <div class="product__img">
+          <img class="product__main-img" src="{{ 'purple-noodle.png' | asset_img_url: '280x280' }}" alt="main product img" loading="lazy" width="280" height="280">
+          <img class="product__second-img" src="{{ 'purple.png' | asset_img_url: '500' , crop: 'center' }}" alt="main product img" loading="lazy" width="280" height="280">
+        </div>
+        <div class="product__name">Tom Yum</div>
+        <div class="product__description">Hot & Savoury contains a balanced mix of carbohydrates, proteins</div>
+        <a href="#" class="product__btn">Buy</a>
+      </div>
+      <div class="product__box">
+        <div class="product__img">
+          <img class="product__main-img" src="{{ 'red-noodle.png' | asset_img_url: '280x280' }}" alt="main product img" loading="lazy" width="280" height="280">
+          <img class="product__second-img" src="{{ 'red.png' | asset_img_url: '500' , crop: 'center' }}" alt="main product img" loading="lazy" width="280" height="280">
+        </div>
+        <div class="product__name">Kimchi</div>
+        <div class="product__description">Will prepare it in 5 minutes - just pour boiling water and dinner is ready</div>
+        <a href="#" class="product__btn">Buy</a>
+      </div>
+      <div class="product__box">
+        <div class="product__img">
+          <img class="product__main-img" src="{{ 'yellow-noodle.png' | asset_img_url: '280x280' }}" alt="main product img" loading="lazy" width="280" height="280">
+          <img class="product__second-img" src="{{ 'yellow.png' | asset_img_url: '500' , crop: 'center' }}" alt="main product img" loading="lazy" width="280" height="280">
+        </div>
+        <div class="product__name">Curry</div>
+        <div class="product__description">26 essential vitamins and minerals., proteins, fats, fiber and all</div>
+        <a href="#" class="product__btn">Buy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="footer__bg">{% render "advantages-lines" %}</div>
+
+    <div class="advatages__main-bg">
+      <img src="{{ "handle-plate-2.png" |  asset_img_url: '1060x780' }}" loading="lazy" alt="plate" class="advantages__plate">
+      <div class="plate">
+        <img src="{{ "plate.png" | asset_img_url: '468x468' }}" loading="lazy" alt="plate" class="img">
+      </div>
+    </div>
+    <div class="advantages__bg"></div>
+    <div class="container">
+      <div class="advantages__container">
+        <div class="advatages__title">
+          <h2>Perfect for those who</h2>
+        </div>
+        <div class="advantages__conten">
+          <div class="advatages__flex first">
+            <div class="advatages__wrapper">
+              <div class="advantages__icon w-embed">
+                <svg width="100%" height="100%" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_380_227)">
+                    <path d="M62.2144 14.1387L74.7773 46.4991C76.8165 45.0146 77.692 42.2882 76.737 39.8284L68.1617 17.7395C67.2068 15.2797 64.721 13.8582 62.2144 14.1387Z" fill="white"></path>
+                    <path d="M51.2783 13.4531L50.0332 13.9365C47.1038 15.0737 45.6457 18.3824 46.7829 21.3117L58.5478 51.6165C59.685 54.546 62.9937 56.004 65.9231 54.8667L67.1681 54.3834C70.0976 53.2461 71.5558 49.9376 70.4185 47.0081L58.6536 16.7033C57.5162 13.7739 54.2077 12.3159 51.2783 13.4531Z" fill="white"></path>
+                    <path d="M46.1488 31.4255L29.2993 37.9668L34.332 50.9305L51.1816 44.3892L46.1488 31.4255Z" fill="white"></path>
+                    <path d="M3.42166 41.6642L11.9969 63.753C12.9519 66.2128 15.4377 67.6344 17.9443 67.354L5.38139 34.9935C3.34219 36.478 2.46672 39.2045 3.42166 41.6642Z" fill="white"></path>
+                    <path d="M14.2305 26.626L12.9854 27.1094C10.056 28.2466 8.59801 31.5553 9.73522 34.4846L21.5001 64.7893C22.6373 67.7187 25.9459 69.1767 28.8753 68.0395L30.1203 67.5561C33.0497 66.4189 34.5077 63.1103 33.3705 60.1809L21.6057 29.8763C20.4683 26.9469 17.1598 25.4888 14.2305 26.626Z" fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_380_227">
+                      <rect width="80" height="80" fill="white" transform="translate(0.0782471 0.746094)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                </div>
+              <p class="advatages__text">are interested a little bit in fitness, but not super bodybuilders</p>
+            </div>
+            <div class="advatages__wrapper">
+              <div class="advantages__icon w-embed">
+                <svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_233_275)">
+                <path d="M13.1202 61.1399H23.2515L25.134 64.9048H38.7556L40.638 61.1399H50.7692C56.7275 61.1399 61.7737 57.1648 63.3976 51.7277H0.491943C2.11587 57.1648 7.1621 61.1399 13.1202 61.1399Z" fill="white"/>
+                <path d="M22.5326 7.30211V7.11023L63.807 4.66316L63.5842 0.904785L0.0827637 4.66969L0.305521 8.42794L3.70799 8.83305V33.5622C4.78187 32.2344 6.05127 31.0713 7.4729 30.1179V9.2812L11.2378 9.72935V28.2248C12.437 27.7995 13.6978 27.5058 15.0027 27.3609V10.1776L18.7676 10.6258V27.361C20.0728 27.5058 21.3334 27.7996 22.5325 28.2249V11.0739L63.4737 15.948L63.9171 12.2093L22.5326 7.30211Z" fill="white"/>
+                <path d="M12.6807 47.9627H15.4253C14.7352 44.9332 14.8785 41.6846 15.9445 38.6304C11.588 39.3644 9.70907 44.6472 12.6807 47.9627Z" fill="white"/>
+                <path d="M3.70825 44.1978C3.70825 45.5058 3.90064 46.7693 4.25718 47.9627H8.2614C5.38916 41.4092 10.6614 34.1123 17.8339 34.8333C18.6355 33.6297 19.5862 32.5338 20.6605 31.5727C12.2197 29.0442 3.70825 35.4018 3.70825 44.1978Z" fill="white"/>
+                <path d="M51.2095 47.9627C54.1799 44.6487 52.3047 39.3648 47.9456 38.6304C49.0113 41.683 49.1553 44.9317 48.4649 47.9627H51.2095Z" fill="white"/>
+                <path d="M59.6331 47.9627C59.9895 46.7692 60.1818 45.5057 60.1818 44.1978C60.1818 35.3837 51.6568 29.0482 43.2297 31.5725C44.3039 32.5336 45.2549 33.6297 46.0563 34.8331C53.2021 34.1148 58.5139 41.3797 55.6286 47.9625H59.6331V47.9627Z" fill="white"/>
+                <path d="M26.2976 44.1978C26.2976 45.6431 26.844 46.9627 27.7402 47.9627H36.1499C37.046 46.9627 37.5923 45.6431 37.5923 44.1978C37.5923 41.0838 35.059 38.5504 31.945 38.5504C28.831 38.5504 26.2976 41.0837 26.2976 44.1978Z" fill="white"/>
+                <path d="M31.9447 31.0208C23.16 31.0208 16.794 39.5165 19.3165 47.9627H23.3207C20.6096 41.777 25.1616 34.7855 31.9447 34.7855C38.7247 34.7855 43.2808 41.7747 40.5688 47.9627H44.5731C47.0974 39.5107 40.7245 31.0208 31.9447 31.0208Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_233_275">
+                <rect width="64" height="64" fill="white" transform="translate(0 0.904785)"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </div>
+              <p class="advatages__text">interested a little bit in</p>
+            </div>
+          </div>
+          <div class="advatages__flex">
+            <div class="advatages__wrapper">
+              <div class="advantages__icon w-embed"><svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_233_294)">
+              <path d="M70.5016 20.9239C69.8134 21.6122 64.9184 26.0853 59.2131 31.0693H47.5693C54.2846 23.1551 62.1766 14.4861 63.1202 13.5425C65.1514 11.5112 68.4593 11.5112 70.5016 13.5425C72.5328 15.5739 72.5328 18.8928 70.5016 20.9239Z" fill="white"/>
+              <path d="M23.9876 32.1295C23.3741 32.1295 22.8777 31.6331 22.8777 31.0195V19.8599C22.8777 17.9272 21.3091 16.3554 19.3819 16.3554C17.4546 16.3554 15.8861 17.9272 15.8861 19.8599C15.8861 21.7872 17.4546 23.3557 19.3819 23.3557C19.9954 23.3557 20.4918 23.8521 20.4918 24.4657C20.4918 25.0792 19.9954 25.5756 19.3819 25.5756C16.2296 25.5756 13.666 23.012 13.666 19.8598C13.666 16.7033 16.2296 14.1354 19.3819 14.1354C22.5341 14.1354 25.0977 16.7033 25.0977 19.8598V31.0194C25.0976 31.6331 24.6012 32.1295 23.9876 32.1295Z" fill="white"/>
+              <path d="M19.3815 22.5284C17.9083 22.5284 16.7095 21.3296 16.7095 19.8564C16.7095 19.2428 17.2059 18.7464 17.8194 18.7464C18.0904 18.7464 18.3386 18.8429 18.5306 19.0045C18.369 18.8115 18.2715 18.5622 18.2715 18.2912C18.2715 17.6777 18.7679 17.1813 19.3815 17.1813C20.8547 17.1813 22.0535 18.3812 22.0535 19.8565C22.0534 21.3296 20.8545 22.5284 19.3815 22.5284ZM18.6703 19.1431C18.8319 19.3361 18.9294 19.5854 18.9294 19.8564C18.9294 20.1057 19.132 20.3084 19.3813 20.3084C19.6307 20.3084 19.8333 20.1057 19.8333 19.8564C19.8333 19.6049 19.6307 19.4012 19.3813 19.4012C19.1105 19.4012 18.8622 19.3047 18.6703 19.1431Z" fill="white"/>
+              <path d="M34.9833 32.1287C34.3698 32.1287 33.8734 31.6323 33.8734 31.0187V9.91597C33.8734 7.98322 32.306 6.41145 30.3787 6.41145C28.4514 6.41145 26.8829 7.98322 26.8829 9.91597C26.8829 11.8432 28.4514 13.4106 30.3787 13.4106C30.9922 13.4106 31.4886 13.907 31.4886 14.5206C31.4886 15.1341 30.9922 15.6305 30.3787 15.6305C27.2264 15.6305 24.6628 13.067 24.6628 9.91583C24.6628 6.75936 27.2264 4.19141 30.3787 4.19141C33.5298 4.19141 36.0934 6.75936 36.0934 9.91583V31.0186C36.0934 31.6323 35.5969 32.1287 34.9833 32.1287Z" fill="white"/>
+              <path d="M30.3783 12.5844C28.9051 12.5844 27.7063 11.3856 27.7063 9.91241C27.7063 9.29887 28.2027 8.80246 28.8163 8.80246C29.0872 8.80246 29.3354 8.89893 29.5274 9.06051C29.3658 8.86757 29.2684 8.61824 29.2684 8.34726C29.2684 7.73371 29.7648 7.2373 30.3783 7.2373C31.8515 7.2373 33.0492 8.43726 33.0492 9.91255C33.0492 11.3856 31.8514 12.5844 30.3783 12.5844ZM29.6672 9.1993C29.8288 9.39224 29.9262 9.64157 29.9262 9.91255C29.9262 10.1619 30.1288 10.3645 30.3782 10.3645C30.6264 10.3645 30.8292 10.1619 30.8292 9.91255C30.8292 9.66112 30.6265 9.45735 30.3782 9.45735C30.1073 9.45721 29.859 9.36074 29.6672 9.1993Z" fill="white"/>
+              <path d="M41.172 32.1293C40.5584 32.1293 40.062 31.6329 40.062 31.0194V19.8598C40.062 16.7033 42.6256 14.1354 45.7779 14.1354C48.929 14.1354 51.4926 16.7033 51.4926 19.8598C51.4926 23.012 48.929 25.5756 45.7779 25.5756C45.1643 25.5756 44.6679 25.0792 44.6679 24.4657C44.6679 23.8521 45.1643 23.3557 45.7779 23.3557C47.7051 23.3557 49.2725 21.7872 49.2725 19.8599C49.2725 17.9272 47.7051 16.3554 45.7779 16.3554C43.8506 16.3554 42.2821 17.9272 42.2821 19.8599V31.0195C42.2819 31.6329 41.7855 32.1293 41.172 32.1293Z" fill="white"/>
+              <path d="M45.7772 22.5285C44.3041 22.5285 43.1052 21.3297 43.1052 19.8565C43.1052 18.3812 44.3041 17.1813 45.7772 17.1813C46.3908 17.1813 46.8872 17.6777 46.8872 18.2912C46.8872 18.5611 46.7907 18.8094 46.6303 19.0012C46.8221 18.8419 47.0693 18.7466 47.3382 18.7466C47.9517 18.7466 48.4481 19.243 48.4481 19.8565C48.4481 21.3297 47.2504 22.5285 45.7772 22.5285ZM46.4851 19.1466C46.2933 19.306 46.0461 19.4013 45.7772 19.4013C45.5279 19.4013 45.3253 19.6051 45.3253 19.8565C45.3253 20.1059 45.5279 20.3085 45.7772 20.3085C46.0254 20.3085 46.2282 20.1059 46.2282 19.8565C46.2282 19.5867 46.3247 19.3385 46.4851 19.1466Z" fill="white"/>
+              <path d="M17.4945 62.1203H47.6603C57.7113 56.678 64.172 46.1245 64.172 34.3986C64.172 33.7881 63.6725 33.2887 63.0621 33.2887H2.09018C1.47972 33.2887 0.980225 33.7882 0.980225 34.3986C0.980225 46.1245 7.44982 56.678 17.4945 62.1203ZM40.7043 58.191C45.5626 56.5444 49.7467 53.493 52.8036 49.3652C53.17 48.873 53.8627 48.7701 54.357 49.1343C54.8492 49.4997 54.9521 50.1945 54.5879 50.6877C51.2601 55.1797 46.7063 58.5009 41.4176 60.2939C41.2995 60.334 41.1791 60.3524 41.061 60.3524C40.5982 60.3524 40.1668 60.0607 40.0096 59.5991C39.8131 59.018 40.1243 58.3883 40.7043 58.191Z" fill="white"/>
+              <path d="M44.7461 64.3408H20.4125L20.3808 64.3798C19.5928 65.3454 19.4373 66.6554 19.9702 67.7874C20.5142 68.9196 21.6241 69.6189 22.8783 69.6189H42.2809C43.5352 69.6189 44.6453 68.9196 45.178 67.7874C45.7219 66.6552 45.5665 65.3454 44.7784 64.3798L44.7461 64.3408Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_233_294">
+              <rect width="72" height="72" fill="white" transform="translate(0.509277 0.904785)"/>
+              </clipPath>
+              </defs>
+              </svg>
+              </div>
+              <p class="advatages__text">wants nutritious meal without harmful elements like MSGs</p>
+            </div>
+            <div class="advatages__wrapper">
+              <div class="advantages__icon w-embed">
+                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M63.609 23.3003C67.1756 19.06 66.6208 12.7193 62.3805 9.15272C58.1402 5.58611 51.7995 6.14092 48.2329 10.3812L63.609 23.3003Z" fill="white"/>
+                <path d="M9.23866 23.3003C5.67205 19.06 6.22685 12.7193 10.4672 9.15272C14.7075 5.58611 21.0481 6.14092 24.6147 10.3812L9.23866 23.3003Z" fill="white"/>
+                <path d="M56.6338 54.4884C59.8041 50.2481 61.7063 45.017 61.7063 39.3105C61.7063 25.361 50.4121 14.0668 36.4626 14.0668C22.5529 14.0668 11.2586 25.361 11.2586 39.3105C11.2586 44.9774 13.1211 50.2084 16.2915 54.4091L8.64307 62.0575L13.6363 67.0508L21.2451 59.442C25.4854 62.652 30.7561 64.5541 36.5023 64.5541C42.2089 64.5541 47.4399 62.652 51.6802 59.4816L59.2493 67.0508L64.2426 62.0575L56.6338 54.4884ZM47.2021 45.6511L43.0014 49.8122L36.3041 43.1149L29.6068 49.8122L25.4061 45.6115L32.1034 38.9142L25.4061 32.2169L29.6068 28.0162L36.3041 34.7531L43.0014 28.0162L47.2021 32.2169L40.5048 38.9142L47.2021 45.6511Z" fill="white"/>
+                </svg>
+              </div>
+              <p class="advatages__text">don’t have much time for cooking, but want nutritious middlemeat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <section class="recipes">
+    <div class="container px-75">
+      <div class="recipes__container">
+        <div class="recipes__title">
+          <h2 class="color-blue">Recipes with noodles</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container noodles__container" style="margin-left: 0px;">
+      <div class="recipes__noodles">
+        <div class="recipes__recipe">
+          <div class="recipes__img"><img src="{{ 'first.png' | asset_img_url: '480x410' }}" loading="lazy" alt="" class="img rounded-30"></div>
+          <div class="recipes__info">
+            <p class="recipes__name">Bibim Guksu</p>
+            <div class="recipes__time">
+              <div class="recipes__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 8H11.1667V9H7.5L7.5 5.33333H8.5L8.5 8Z" fill="#2C2C2C"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8.5C1.5 4.91015 4.41015 2 8 2C11.5899 2 14.5 4.91015 14.5 8.5C14.5 12.0899 11.5899 15 8 15C4.41015 15 1.5 12.0899 1.5 8.5ZM8 3C4.96243 3 2.5 5.46243 2.5 8.5C2.5 11.5376 4.96243 14 8 14C11.0376 14 13.5 11.5376 13.5 8.5C13.5 5.46243 11.0376 3 8 3Z" fill="#2C2C2C"></path>
+                </svg></div>
+              <p class="recipes__name font-sans">15m</p>
+            </div>
+          </div>
+        </div>
+        <div class="recipes__recipe">
+          <div class="recipes__img"><img src="{{ 'second.png' | asset_img_url: '480x410' }}" loading="lazy" alt="" class="img rounded-30"></div>
+          <div class="recipes__info">
+            <p class="recipes__name">Bibim Guksu</p>
+            <div class="recipes__time">
+              <div class="recipes__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 8H11.1667V9H7.5L7.5 5.33333H8.5L8.5 8Z" fill="#2C2C2C"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8.5C1.5 4.91015 4.41015 2 8 2C11.5899 2 14.5 4.91015 14.5 8.5C14.5 12.0899 11.5899 15 8 15C4.41015 15 1.5 12.0899 1.5 8.5ZM8 3C4.96243 3 2.5 5.46243 2.5 8.5C2.5 11.5376 4.96243 14 8 14C11.0376 14 13.5 11.5376 13.5 8.5C13.5 5.46243 11.0376 3 8 3Z" fill="#2C2C2C"></path>
+                </svg></div>
+              <p class="recipes__name font-sans">15m</p>
+            </div>
+          </div>
+        </div>
+        <div class="recipes__recipe">
+          <div class="recipes__img"><img src="{{ 'third.png' | asset_img_url: '480x410' }}" loading="lazy" alt="" class="img rounded-30"></div>
+          <div class="recipes__info">
+            <p class="recipes__name">Bibim Guksu</p>
+            <div class="recipes__time">
+              <div class="recipes__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 8H11.1667V9H7.5L7.5 5.33333H8.5L8.5 8Z" fill="#2C2C2C"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8.5C1.5 4.91015 4.41015 2 8 2C11.5899 2 14.5 4.91015 14.5 8.5C14.5 12.0899 11.5899 15 8 15C4.41015 15 1.5 12.0899 1.5 8.5ZM8 3C4.96243 3 2.5 5.46243 2.5 8.5C2.5 11.5376 4.96243 14 8 14C11.0376 14 13.5 11.5376 13.5 8.5C13.5 5.46243 11.0376 3 8 3Z" fill="#2C2C2C"></path>
+                </svg></div>
+              <p class="recipes__name font-sans">15m</p>
+            </div>
+          </div>
+        </div>
+        <div class="recipes__recipe">
+          <div class="recipes__img"><img src="{{ 'first.png' | asset_img_url: '480x410' }}" loading="lazy" alt="" class="img rounded-30"></div>
+          <div class="recipes__info">
+            <p class="recipes__name">Bibim Guksu</p>
+            <div class="recipes__time">
+              <div class="recipes__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 8H11.1667V9H7.5L7.5 5.33333H8.5L8.5 8Z" fill="#2C2C2C"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8.5C1.5 4.91015 4.41015 2 8 2C11.5899 2 14.5 4.91015 14.5 8.5C14.5 12.0899 11.5899 15 8 15C4.41015 15 1.5 12.0899 1.5 8.5ZM8 3C4.96243 3 2.5 5.46243 2.5 8.5C2.5 11.5376 4.96243 14 8 14C11.0376 14 13.5 11.5376 13.5 8.5C13.5 5.46243 11.0376 3 8 3Z" fill="#2C2C2C"></path>
+                </svg></div>
+              <p class="recipes__name font-sans">15m</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipes__button">
+        <a href="/" class="button">More Recipes</a>
+
+      </div>
+    </div>
+    <div class="recipes__scroll-bar">
+      <div class="recipes__scroll-btn"></div>
+    </div>
+    <div class="hidden w-embed w-script">
+    </div>
+  </section>
+
+  <section class="shedule">
+    <div class="container px-75 mobile-padding-none">
+      <div class="shedule__wrapper"><img src="{{ 'static-shedule.jpg' | asset_img_url: '1280x700' }}" loading="lazy" alt="shedule" class="shedule__img hide-on-mobile"><img src="{{ 'sgedule-mobile.jpg' | asset_img_url: '1200x760' }}" loading="lazy"  alt="mobile shedule" class="shedule__img visible-on-mobile"></div>
+    </div>
+  </section>
+
+  <section class="insta">
+    <div class="container">
+      <div class="insta__top-title">
+        <h2 class="color-blue">Follow us  on Instagram</h2>
+      </div>
+    </div>
+    <div class="insta__slider">
+      <div class="insta__slide">
+        <div class="insta__wrapper">
+          <div class="insta__info top">
+            <div class="insta__top">
+              <div class="insta__logo"><div class="insta__logo-img">{% render 'insta-our-logo' %}</div></div>
+              <p class="insta__title logo-name">More than</p>
+            </div>
+          </div><img src="{{ 'insta-1.jpg' |  asset_img_url: '343x234' }}" loading="lazy" alt="insta-photo" class="insta__main-img">
+          <div class="insta__info bottom">
+            <div class="insta__counter-wrapper">
+              <p class="insta__title">18 299 liked and other</p>
+              <div class="insta__buttons">
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.5292 25.2145C15.5292 25.2145 4.0332 18.7767 4.0332 10.9594C4.0332 9.57744 4.51201 8.23817 5.38815 7.16945C6.26429 6.10072 7.48365 5.36857 8.83877 5.09754C10.1939 4.82652 11.6011 5.03337 12.8208 5.68291C14.0406 6.33244 14.9977 7.38454 15.5292 8.66019V8.66019C16.0608 7.38454 17.0178 6.33244 18.2376 5.68291C19.4574 5.03337 20.8646 4.82652 22.2197 5.09754C23.5748 5.36857 24.7942 6.10072 25.6703 7.16945C26.5465 8.23817 27.0253 9.57744 27.0253 10.9594C27.0253 18.7767 15.5292 25.2145 15.5292 25.2145Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.46265 20.73C4.09335 18.4197 3.61438 15.6891 4.11567 13.0508C4.61696 10.4124 6.06404 8.0478 8.18524 6.40077C10.3064 4.75374 12.9559 3.93761 15.6362 4.10558C18.3165 4.27356 20.8433 5.41409 22.7422 7.31306C24.6412 9.21203 25.7817 11.7388 25.9497 14.4191C26.1177 17.0994 25.3016 19.7489 23.6545 21.8701C22.0075 23.9913 19.6429 25.4383 17.0045 25.9396C14.3662 26.4409 11.6356 25.962 9.32532 24.5926V24.5926L5.50864 25.6733C5.35227 25.719 5.18647 25.7218 5.02863 25.6815C4.87079 25.6411 4.72672 25.559 4.61151 25.4438C4.49631 25.3286 4.41422 25.1845 4.37384 25.0267C4.33346 24.8688 4.33629 24.703 4.38203 24.5467L5.46265 20.73Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.8509 4.51015L3.42226 10.5456C3.23985 10.5954 3.07724 10.7003 2.9566 10.846C2.83595 10.9916 2.76313 11.1708 2.74805 11.3594C2.73297 11.5479 2.77636 11.7364 2.87232 11.8994C2.96828 12.0623 3.11214 12.1917 3.28431 12.27L13.1249 16.9259C13.3177 17.0151 13.4725 17.17 13.5618 17.3627L18.2177 27.2033C18.2959 27.3755 18.4253 27.5193 18.5883 27.6153C18.7512 27.7113 18.9398 27.7547 19.1283 27.7396C19.3168 27.7245 19.4961 27.6517 19.6417 27.531C19.7873 27.4104 19.8922 27.2478 19.9421 27.0654L25.9775 5.63676C26.0232 5.48039 26.026 5.31459 25.9857 5.15675C25.9453 4.99891 25.8632 4.85484 25.748 4.73963C25.6328 4.62443 25.4887 4.54234 25.3309 4.50196C25.173 4.46159 25.0072 4.46442 24.8509 4.51015V4.51015Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M13.4233 17.0634L18.6195 11.8672" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="insta__social w-inline-block">
+              <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.9537 26.1342L15.5962 21.5357L8.23877 26.1342V5.90113C8.23877 5.65721 8.33566 5.42329 8.50814 5.25081C8.68061 5.07834 8.91454 4.98145 9.15845 4.98145H22.034C22.2779 4.98145 22.5119 5.07834 22.6843 5.25081C22.8568 5.42329 22.9537 5.65721 22.9537 5.90113V26.1342Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="insta__slide">
+        <div class="insta__wrapper">
+          <div class="insta__info top">
+            <div class="insta__top">
+              <div class="insta__logo"><div class="insta__logo-img">{% render 'insta-our-logo' %}</div></div>
+              <p class="insta__title logo-name">More than</p>
+            </div>
+          </div><img src="{{ 'center-insta-photo.png' | asset_img_url: '343x234' }}" loading="lazy" alt="insta-photo" class="insta__main-img">
+          <div class="insta__info bottom">
+            <div class="insta__counter-wrapper">
+              <p class="insta__title">18 299 liked and other</p>
+              <div class="insta__buttons">
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.5292 25.2145C15.5292 25.2145 4.0332 18.7767 4.0332 10.9594C4.0332 9.57744 4.51201 8.23817 5.38815 7.16945C6.26429 6.10072 7.48365 5.36857 8.83877 5.09754C10.1939 4.82652 11.6011 5.03337 12.8208 5.68291C14.0406 6.33244 14.9977 7.38454 15.5292 8.66019V8.66019C16.0608 7.38454 17.0178 6.33244 18.2376 5.68291C19.4574 5.03337 20.8646 4.82652 22.2197 5.09754C23.5748 5.36857 24.7942 6.10072 25.6703 7.16945C26.5465 8.23817 27.0253 9.57744 27.0253 10.9594C27.0253 18.7767 15.5292 25.2145 15.5292 25.2145Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.46265 20.73C4.09335 18.4197 3.61438 15.6891 4.11567 13.0508C4.61696 10.4124 6.06404 8.0478 8.18524 6.40077C10.3064 4.75374 12.9559 3.93761 15.6362 4.10558C18.3165 4.27356 20.8433 5.41409 22.7422 7.31306C24.6412 9.21203 25.7817 11.7388 25.9497 14.4191C26.1177 17.0994 25.3016 19.7489 23.6545 21.8701C22.0075 23.9913 19.6429 25.4383 17.0045 25.9396C14.3662 26.4409 11.6356 25.962 9.32532 24.5926V24.5926L5.50864 25.6733C5.35227 25.719 5.18647 25.7218 5.02863 25.6815C4.87079 25.6411 4.72672 25.559 4.61151 25.4438C4.49631 25.3286 4.41422 25.1845 4.37384 25.0267C4.33346 24.8688 4.33629 24.703 4.38203 24.5467L5.46265 20.73Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.8509 4.51015L3.42226 10.5456C3.23985 10.5954 3.07724 10.7003 2.9566 10.846C2.83595 10.9916 2.76313 11.1708 2.74805 11.3594C2.73297 11.5479 2.77636 11.7364 2.87232 11.8994C2.96828 12.0623 3.11214 12.1917 3.28431 12.27L13.1249 16.9259C13.3177 17.0151 13.4725 17.17 13.5618 17.3627L18.2177 27.2033C18.2959 27.3755 18.4253 27.5193 18.5883 27.6153C18.7512 27.7113 18.9398 27.7547 19.1283 27.7396C19.3168 27.7245 19.4961 27.6517 19.6417 27.531C19.7873 27.4104 19.8922 27.2478 19.9421 27.0654L25.9775 5.63676C26.0232 5.48039 26.026 5.31459 25.9857 5.15675C25.9453 4.99891 25.8632 4.85484 25.748 4.73963C25.6328 4.62443 25.4887 4.54234 25.3309 4.50196C25.173 4.46159 25.0072 4.46442 24.8509 4.51015V4.51015Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M13.4233 17.0634L18.6195 11.8672" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="insta__social w-inline-block">
+              <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.9537 26.1342L15.5962 21.5357L8.23877 26.1342V5.90113C8.23877 5.65721 8.33566 5.42329 8.50814 5.25081C8.68061 5.07834 8.91454 4.98145 9.15845 4.98145H22.034C22.2779 4.98145 22.5119 5.07834 22.6843 5.25081C22.8568 5.42329 22.9537 5.65721 22.9537 5.90113V26.1342Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="insta__slide">
+        <div class="insta__wrapper">
+          <div class="insta__info top">
+            <div class="insta__top">
+              <div class="insta__logo"><div class="insta__logo-img">{% render 'insta-our-logo' %}</div></div>
+              <p class="insta__title logo-name">More than</p>
+            </div>
+          </div><img src="{{ 'insta-2.jpg' |  asset_img_url: '343x234' }}" loading="lazy" alt="insta photo" class="insta__main-img">
+          <div class="insta__info bottom">
+            <div class="insta__counter-wrapper">
+              <p class="insta__title">18 299 liked and other</p>
+              <div class="insta__buttons">
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.5292 25.2145C15.5292 25.2145 4.0332 18.7767 4.0332 10.9594C4.0332 9.57744 4.51201 8.23817 5.38815 7.16945C6.26429 6.10072 7.48365 5.36857 8.83877 5.09754C10.1939 4.82652 11.6011 5.03337 12.8208 5.68291C14.0406 6.33244 14.9977 7.38454 15.5292 8.66019V8.66019C16.0608 7.38454 17.0178 6.33244 18.2376 5.68291C19.4574 5.03337 20.8646 4.82652 22.2197 5.09754C23.5748 5.36857 24.7942 6.10072 25.6703 7.16945C26.5465 8.23817 27.0253 9.57744 27.0253 10.9594C27.0253 18.7767 15.5292 25.2145 15.5292 25.2145Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.46265 20.73C4.09335 18.4197 3.61438 15.6891 4.11567 13.0508C4.61696 10.4124 6.06404 8.0478 8.18524 6.40077C10.3064 4.75374 12.9559 3.93761 15.6362 4.10558C18.3165 4.27356 20.8433 5.41409 22.7422 7.31306C24.6412 9.21203 25.7817 11.7388 25.9497 14.4191C26.1177 17.0994 25.3016 19.7489 23.6545 21.8701C22.0075 23.9913 19.6429 25.4383 17.0045 25.9396C14.3662 26.4409 11.6356 25.962 9.32532 24.5926V24.5926L5.50864 25.6733C5.35227 25.719 5.18647 25.7218 5.02863 25.6815C4.87079 25.6411 4.72672 25.559 4.61151 25.4438C4.49631 25.3286 4.41422 25.1845 4.37384 25.0267C4.33346 24.8688 4.33629 24.703 4.38203 24.5467L5.46265 20.73Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a href="#" class="insta__social w-inline-block">
+                  <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.8509 4.51015L3.42226 10.5456C3.23985 10.5954 3.07724 10.7003 2.9566 10.846C2.83595 10.9916 2.76313 11.1708 2.74805 11.3594C2.73297 11.5479 2.77636 11.7364 2.87232 11.8994C2.96828 12.0623 3.11214 12.1917 3.28431 12.27L13.1249 16.9259C13.3177 17.0151 13.4725 17.17 13.5618 17.3627L18.2177 27.2033C18.2959 27.3755 18.4253 27.5193 18.5883 27.6153C18.7512 27.7113 18.9398 27.7547 19.1283 27.7396C19.3168 27.7245 19.4961 27.6517 19.6417 27.531C19.7873 27.4104 19.8922 27.2478 19.9421 27.0654L25.9775 5.63676C26.0232 5.48039 26.026 5.31459 25.9857 5.15675C25.9453 4.99891 25.8632 4.85484 25.748 4.73963C25.6328 4.62443 25.4887 4.54234 25.3309 4.50196C25.173 4.46159 25.0072 4.46442 24.8509 4.51015V4.51015Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M13.4233 17.0634L18.6195 11.8672" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="insta__social w-inline-block">
+              <div class="insta__icon w-embed"><svg width="100%" height="100%" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.9537 26.1342L15.5962 21.5357L8.23877 26.1342V5.90113C8.23877 5.65721 8.33566 5.42329 8.50814 5.25081C8.68061 5.07834 8.91454 4.98145 9.15845 4.98145H22.034C22.2779 4.98145 22.5119 5.07834 22.6843 5.25081C22.8568 5.42329 22.9537 5.65721 22.9537 5.90113V26.1342Z" stroke="#797596" stroke-width="1.83937" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insta__scrollbar"><span class="insta__scroll"></span></div>
+    <div class="insta__button">
+      <a href="/" class="button">{% render 'insta-icon' %} Follow us</a>
+    </div>
+
+  </section>
+
+  <section class="map">
+    <h2 class="map__title color-blue">Find more products in Dubai’s stores</h2>
+    <div class="relative overflow-hidden">
+      <div class="map__preloader"><img src="{{ 'map-preloader.png' | asset_img_url: '1440x700' }}" loading="lazys" alt="preloader-mask"></div>
+      <div id="map" class="map__wrapper"></div>
+    </div>
+  </section>
+
+
+
+

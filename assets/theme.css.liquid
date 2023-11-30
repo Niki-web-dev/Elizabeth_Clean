@@ -1,0 +1,1990 @@
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: local("Benzin Semibold"), local("Benzin-Semibold"),
+    url('{{ "Benzin-Semibold.woff2" | asset_url }}') format("woff2"),
+    url('{{ "Benzin-Semibold.woff" | asset_url }}') format("woff"),
+    url('{{ "Benzin-Semibold.ttf" | asset_url }}') format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MAXWELLBOLD";
+  src: local("MAXWELLBOLD"),
+    url('{{ "maxwell-bold.woff2" | asset_url }}') format("woff2"),
+    url('{{ "MAXWELLBOLD.ttf" | asset_url }}') format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: local("Pt Sans Narrow"), local("Pt-Sans-Narrow"),
+    url('{{ "PTSansNarrow-Regular.ttf" | asset_url }}') format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-TUF: #0034c6;
+  --white: #fff;
+  --f2-white: #f2dfde;
+  --f6-pink: #f6d6d6;
+  --fs-96: 96px;
+  --fs-90: 90px;
+  --fs-88: 88px;
+  --fs-80: 80px;
+  --fs-70: 70px;
+  --fs-60: 60px;
+  --fs-54: 54px;
+  --fs-52: 52px;
+  --fs-48: 48px;
+  --fs-44: 44px;
+  --fs-40: 40px;
+  --fs-36: 36px;
+  --fs-32: 32px;
+  --fs-28: 28px;
+  --fs-24: 24px;
+  --fs-20: 20px;
+  --red: #e23c13;
+  --yellow: #f09e00;
+  --black: #272728;
+  --black-2c: #2c2c2c;
+  --black-18: #181818;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  padding: 0px 100px;
+  max-width: 1440px;
+}
+
+.color-f6 {
+  color: var(--f6-pink);
+}
+
+.color-blue {
+  color: var(--blue-TUF);
+}
+
+h1 {
+  color: var(--white);
+  font-family: "MAXWELLBOLD";
+  font-size: var(--fs-90);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 98%; /* 88.713px */
+  letter-spacing: 1.358px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  font-size: 100px;
+  line-height: 108%; /* 108px */
+  text-align: center;
+  font-family: "MAXWELLBOLD";
+}
+
+p {
+  margin: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+body {
+  font-family: "PT Sans Narrow", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  color: #fff;
+  background-color: var(--f6-pink);
+  margin: 0;
+}
+
+a,
+.logo,
+.logo-2 {
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* start nav */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.burger__line {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background-color: var(--white);
+  transition: all 0.5s ease;
+  transform-origin: center center;
+}
+
+.nav__burger {
+  display: none;
+  cursor: pointer;
+}
+
+.checkout__btn {
+  position: absolute;
+  right: -50px;
+  margin-top: 5px;
+  top: 50%;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.nav {
+  padding: 30px 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 0.5s ease;
+}
+
+.nav.active {
+  background-color: var(--blue-TUF);
+}
+
+.nav__link {
+  color: var(--white);
+  font-family: "MAXWELLBOLD";
+  font-size: var(--fs-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  letter-spacing: 0.42px;
+  transition: color 0.3s ease;
+}
+
+.nav__link.mobile {
+  display: none;
+}
+
+.nav__link:hover {
+  color: var(--red);
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__links-bg {
+  display: none;
+}
+
+.nav__links .logo-2 {
+  display: none;
+}
+
+.nav__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+  bottom: -30px;
+}
+.logo {
+  width: 105px;
+}
+.logo-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 9px;
+  height: 2.5px;
+  margin-left: -91px;
+  width: 100%;
+  background-color: var(--white);
+}
+.logo-block {
+  background-color: var(--white);
+  display: block;
+  width: 9px;
+  height: 20px;
+}
+
+.logo-block-1 {
+  margin-top: 1px;
+}
+
+.logo-2 {
+  width: 50px;
+  align-self: end;
+}
+/* end nav */
+
+.hero__bg {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero {
+  height: 770px;
+  width: 100%;
+  border-radius: 0px 0px 70px 70px;
+  background: var(--blue-TUF);
+  position: relative;
+  z-index: 10;
+}
+
+.hero__subtitle {
+  color: var(--f2-white);
+  font-family: PT Sans Narrow;
+  font-size: var(--fs-28);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 36.4px */
+  max-width: 426px;
+}
+
+.hero__content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 750px;
+  z-index: 1;
+  position: relative;
+}
+.hero__title {
+  margin-bottom: 12px;
+}
+
+.hero__subtitle {
+  margin-bottom: 40px;
+}
+
+.hero__img {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 900px;
+}
+
+.hero__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.7s ease;
+}
+
+.hero__img.active img {
+  transform: translateY(0%);
+}
+
+.button {
+  color: var(--white);
+  font-family: "MAXWELLBOLD";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 41.6px */
+  letter-spacing: 1.28px;
+  display: inline-flex;
+  padding: 14px 70px 16px 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+  background: var(--red);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.arrow {
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 42px;
+}
+
+.rounded__text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-color: #e23c13;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.rotate-block {
+  animation: rotate 5s linear infinite;
+  width: 112px;
+  height: 108px;
+}
+
+.noodle {
+  padding-top: 200px;
+  padding-bottom: 162px;
+  position: relative;
+  margin-top: -80px;
+  z-index: 9;
+  background-color: var(--f6-pink);
+}
+.parsley {
+  width: 176px;
+  height: 177px;
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: 10px;
+  transition: transform 0.4s linear;
+}
+
+.noodle__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  object-fit: fill;
+  object-position: 50% 50%;
+  margin-top: 76px;
+  z-index: -2;
+  height: 856px;
+}
+
+.noodle__icon {
+  height: 72px;
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mushrooms {
+  position: absolute;
+  width: 137px;
+  height: 115px;
+  z-index: -1;
+  top: 360px;
+  right: 0;
+  transition: transform 0.7s linear;
+}
+.noodle__title {
+  margin-bottom: 52px;
+  color: var(--red);
+}
+.noodle__advantage-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 75px;
+  max-width: 1114px;
+}
+.noodle__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 247px;
+  justify-content: center;
+}
+.noodle__advantage {
+  color: var(--black);
+  text-align: center;
+  font-family: "MAXWELLBOLD";
+  font-size: 44px;
+  line-height: 130%; /* 57.2px */
+}
+.noodle__descr {
+  color: var(--black);
+  font-size: 28px;
+  line-height: 130%; /* 36.4px */
+}
+
+.noodle__button {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move-logo {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.loop {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.loop__content.active {
+  animation: move-logo 9.9s linear;
+}
+
+.loop__content {
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.big-logo {
+  min-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product {
+  padding: 115px 0;
+}
+
+.product__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 282px);
+  row-gap: 16px;
+  grid-auto-columns: 282px;
+  justify-content: space-between;
+}
+.product__box {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product__img {
+  position: relative;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.product__main-img {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+.product__second-img {
+  opacity: 0;
+  z-index: 1;
+}
+
+.product__second-img,
+.product__bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+.product__bg-circle {
+  margin-top: -20px;
+  width: 322px;
+  opacity: 0.4;
+  height: 319px;
+  color: var(--white);
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.product__name {
+  color: #63257c;
+  text-align: center;
+  font-family: "MAXWELLBOLD";
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 120%; /* 52.8px */
+}
+
+.product__box:nth-child(2) .product__name {
+  color: var(--red);
+}
+
+.product__box:nth-child(3) .product__name {
+  color: #f09e00;
+}
+
+.product__box:nth-child(2) .product__btn {
+  background-color: var(--red);
+}
+.product__box:nth-child(3) .product__btn {
+  background-color: #f09e00;
+}
+
+.product__description {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 132.5%; /* 23.85px */
+  color: var(--black-2c);
+  margin-bottom: 14px;
+}
+.product__btn {
+  opacity: 0;
+  pointer-events: none;
+  padding: 15px 70px;
+  margin: 0 auto;
+  color: var(--white);
+  font-size: 32px;
+  font-family: "MAXWELLBOLD";
+  font-weight: 400;
+  line-height: 130%; /* 41.6px */
+  letter-spacing: 1.28px;
+  border-radius: 64px;
+  background: #63257c;
+  transition: opacity, color, background-color 0.3s ease;
+}
+
+.product__btn:hover {
+  background-color: var(--white);
+  color: var(--black-2c);
+}
+
+.product__box:hover .product__btn {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.product__box:hover .product__main-img {
+  opacity: 0;
+}
+
+.product__box:hover .product__second-img {
+  opacity: 1;
+}
+.product__box:hover .product__bg-circle {
+  color: #0a7334;
+  opacity: 1;
+}
+
+.advantages {
+  background-color: #0034c6;
+  padding-top: 52px;
+  padding-bottom: 110px;
+  position: relative;
+}
+
+.advantages__plate {
+  width: 100%;
+  height: 100%;
+}
+
+.noodles__container {
+  max-width: 100%;
+  flex-direction: column;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  overflow: auto;
+}
+
+.noodles__container {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.noodles__container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.noodles__container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.noodles__container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.container.px-75 {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.advatages__title {
+  color: #fff;
+  position: relative;
+}
+
+.advantages__conten {
+  height: 100%;
+  gap: 80px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+.advantages__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+}
+
+.advantages {
+  overflow: hidden;
+}
+
+.img.rounded-30 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.advantages__container {
+  height: 100%;
+  grid-column-gap: 44px;
+  grid-row-gap: 44px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+.advatages__flex {
+  justify-content: space-between;
+  display: flex;
+}
+
+.advatages__flex.first {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advatages__wrapper {
+  max-width: 270px;
+  grid-column-gap: 22px;
+  grid-row-gap: 22px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.advantages__icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.advatages__text {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.advatages__main-bg {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 44.6111vw;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@keyframes rotate-plate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.plate {
+  width: 46vw;
+  max-width: 591px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plate .img {
+  width: 100%;
+  height: 100%;
+  animation: rotate-plate 20s linear infinite;
+  transform-origin: center center;
+}
+
+.recipes {
+  padding-top: 120px;
+  padding-bottom: 85px;
+  overflow: hidden;
+}
+
+.recipes__button {
+  display: none;
+}
+
+.recipes__container {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  flex-direction: column;
+}
+
+.recipes__title {
+  margin-bottom: 40px;
+}
+
+.recipes__noodles {
+  padding-bottom: 66px;
+  padding-left: 30px;
+  display: flex;
+}
+
+.recipes__recipe {
+  width: 100%;
+  max-width: 472px;
+  margin-right: 24px;
+}
+
+.recipes__img {
+  width: 472px;
+  height: 468px;
+  margin-bottom: 20px;
+}
+
+.recipes__info {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.recipes__name {
+  color: #2c2c2c;
+  font-family: "MAXWELLBOLD";
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.font-sans {
+  font-family: "PT Sans Narrow";
+}
+
+.recipes__time {
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  align-items: center;
+  display: flex;
+}
+
+.recipes__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container.pr-0 {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.container.pr-0::-webkit-scrollbar {
+  width: 0em;
+}
+.container.pr-0::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.container.pr-0::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+.container.pr-0::-webkit-scrollbar-track {
+  background: transparent;
+}
+.container.pr-0::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+.recipes__scroll-bar {
+  width: 100%;
+  height: 2px;
+  max-width: 600px;
+  background-color: rgba(0, 52, 198, 0.2);
+  border-radius: 50px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.recipes__scroll-btn {
+  width: 100%;
+  height: 10px;
+  max-width: 131px;
+  background-color: #0034c6;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.shedule {
+  background-color: #e23c13;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.shedule__img {
+  width: 100%;
+  border-radius: 40px;
+}
+
+.shedule__img.visible-on-mobile {
+  display: none;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.slick-slide {
+  transition: all 0.5s ease;
+}
+.slick-track {
+  padding: 150px 0px;
+}
+/*.slick-active .insta__info.top {
+transform: translate(-50%, -150%);
+}
+.slick-active .insta__info.bottom {
+transform: translate(-50%, 150%);
+}*/
+.slick-slide .insta__info.top,
+.slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"]
+  .insta__info.top {
+  transform: translate(-50%, 0%);
+  transition: all 1000ms ease;
+}
+.slick-center .insta__info.top,
+.slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"]
+  .insta__info.top {
+  transform: translate(-50%, -150%);
+}
+.slick-slide .insta__info.bottom,
+.slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"]
+  .insta__info.bottom {
+  transform: translate(-50%, 0%);
+  transition: all 1000ms ease;
+}
+.slick-center .insta__info.bottom,
+.slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"]
+  .insta__info.bottom {
+  transform: translate(-50%, 150%);
+}
+.slick-slide .insta__main-img,
+.slick-slide[aria-hidden="true"]:not(.slick-cloned)
+  ~ .slick-cloned[aria-hidden="true"]
+  .insta__main-img {
+  transform: scale(1.2, 1.2);
+  transition: all 1000ms ease;
+}
+.slick-center .insta__main-img,
+.slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+  + .slick-cloned[aria-hidden="true"]
+  .insta__main-img {
+  /* max-width: 200%;
+  max-height: 200%;
+  width: 200%;
+  height: 200%; */
+  transform: scale(1.4, 1.4);
+}
+
+.insta {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.insta__scrollbar {
+  display: none;
+}
+
+.insta__button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.insta__button .button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.insta__button .button svg {
+  transition: color 0.3s linear;
+}
+
+.insta__top-title {
+  max-width: 517px;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insta__slider {
+  grid-row-gap: 36px;
+  justify-content: center;
+  padding-top: 85px;
+  display: flex;
+  overflow: hidden;
+}
+
+.insta__slide {
+  z-index: 1;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: relative;
+}
+
+.insta__title.logo-name {
+  font-family: "MAXWELLBOLD";
+}
+
+.insta__main-img {
+  z-index: 2;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.insta__info {
+  width: 100%;
+  background-color: #fff;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  padding: 16px 22px;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.insta__info.top {
+  top: 0;
+  transform: translate(-50%);
+}
+
+.insta__info.bottom {
+  border-radius: 0 0 22px 22px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  top: auto;
+  bottom: 3px;
+  transform: translate(-50%);
+}
+
+.insta__top {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.insta__logo {
+  width: 50px;
+  height: 50px;
+  background-color: #e23c13;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.insta__logo-img {
+  object-fit: cover;
+  width: 39px;
+  height: 16px;
+}
+
+.insta__title {
+  color: #2d2936;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.insta__counter-wrapper {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.insta__buttons {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  display: flex;
+}
+
+.insta__social {
+  width: 30px;
+  height: 30px;
+}
+
+.insta__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.insta .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+}
+
+.footer__img {
+  width: 100%;
+  max-height: 828px;
+  object-fit: cover;
+}
+
+.footer__content {
+  width: 100%;
+  background-color: #e23c13;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 50px;
+  display: flex;
+}
+
+.footer__logo-img {
+  max-width: 491px;
+}
+
+.footer__logo {
+  margin-bottom: 52px;
+}
+
+.footer__links {
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 22px;
+  display: flex;
+}
+
+.footer__container {
+  max-width: 491px;
+}
+
+.footer__link {
+  color: #fff;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: #0034c6;
+}
+
+.bg-blue {
+  background-color: #0034c6;
+  border-radius: 64px;
+}
+
+.map {
+  margin-top: 40px;
+}
+
+.map__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.map__preloader {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s ease;
+}
+
+.map__preloader img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.map__title {
+  max-width: 974px;
+  text-align: center;
+  margin: 0 auto 45px auto;
+  display: block;
+}
+
+.insta__wrapper {
+  position: relative;
+}
+
+.map__wrapper,
+.map__preloader img {
+  height: 630px;
+  max-height: 90vh;
+}
+
+.footer .button {
+  background-color: var(--blue-TUF);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.footer .button:hover {
+  background-color: var(--f2-white);
+}
+
+.footer__logo {
+  margin-bottom: 54px;
+  position: relative;
+  z-index: 3;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  overflow: hidden;
+}
+
+.footer__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.footer__content {
+  position: relative;
+}
+
+.footer__links {
+  position: relative;
+  z-index: 3;
+}
+
+/* start MEDIA queries */
+
+@media screen and (max-width: 1300px) {
+  .advatages__main-bg {
+    width: 36vw;
+  }
+
+  .plate {
+    width: 39vw;
+  }
+
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__img {
+    width: 55vw;
+    right: 20px;
+  }
+
+  h1 {
+    font-size: var(--fs-70);
+  }
+
+  .product__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .insta__slide {
+    margin: 0px 8vw;
+  }
+
+  .advantages__conten {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.6, 1.6);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.35, 1.35);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.2, 1.2);
+  }
+
+  h2 {
+    font-size: var(--fs-52);
+  }
+
+  .nav__burger .burger__line.line-1.active {
+    transform: rotateZ(45deg) translateY(8px);
+  }
+
+  .nav__burger .burger__line.line-2.active {
+    transform: rotateZ(-45deg) translateY(-8px);
+  }
+
+  .noodle__descr {
+    font-size: 23px;
+  }
+
+  .noodle__advantage-wrapper {
+    margin-bottom: 100px;
+  }
+
+  .noodle__content {
+    max-width: 200px;
+  }
+
+  .noodle__advantage {
+    font-size: var(--fs-32);
+  }
+
+  .noodle__title {
+    margin-bottom: 100px;
+  }
+
+  .noodle .container {
+    overflow: hidden;
+  }
+
+  .mushrooms {
+    right: -20px;
+    width: 91px;
+    height: auto;
+    top: 500px;
+  }
+
+  .parsley {
+    width: 90px;
+    left: -28px;
+    height: auto;
+  }
+
+  .nav__link.mobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav__links.is-open {
+    transform: translateY(0%);
+  }
+
+  .nav__links {
+    transform: translateY(-120%);
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    background-color: var(--blue-TUF);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav__links-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .nav__link {
+    font-size: var(--fs-32);
+    letter-spacing: 0.96px;
+    text-transform: capitalize;
+  }
+
+  .logo,
+  .logo-2,
+  .logo-divider {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .checkout__btn {
+    right: 0;
+    margin-top: 0px;
+    top: 0;
+    display: block;
+    color: white;
+    z-index: 99;
+    position: relative;
+  }
+
+  .nav__logo-wrapper {
+    z-index: 101;
+    position: relative;
+    bottom: -4px;
+  }
+
+  .nav__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 101;
+  }
+
+  .nav__content {
+    justify-content: space-between;
+  }
+
+  .nav {
+    padding: 16px 0px;
+  }
+
+  .hero__img {
+    right: 30px;
+  }
+
+  .button {
+    font-size: var(--fs-24);
+    padding: 22px 70px;
+    letter-spacing: 1px;
+  }
+
+  .advantages {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .container,
+  .container.px-75 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .advantages__conten {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .advatages__wrapper {
+    max-width: 154px;
+  }
+
+  .advatages__text {
+    font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer__img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  .footer__content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .recipes__noodles {
+    flex-direction: column;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .recipes__img {
+    height: 390px;
+  }
+
+  .recipes__scroll-bar {
+    display: none;
+  }
+
+  .recipes__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .recipes__button .button {
+    background-color: transparent;
+    border: 2px solid var(--red);
+    padding-left: 50px;
+    padding-right: 50px;
+    color: var(--red);
+  }
+
+  .recipes__button .button:hover {
+    background-color: var(--red);
+    color: var(--f2-white);
+  }
+
+  .footer__content {
+    width: auto;
+  }
+
+  .insta__slide {
+    margin: 0 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantages {
+    padding-bottom: 311px;
+    overflow: hidden;
+  }
+
+  .container.px-75 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .container.px-75.mobile-padding-none {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .advantages__bg {
+    width: 130%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+
+  .advatages__flex {
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    justify-content: center;
+  }
+
+  .advatages__flex.first {
+    width: 100%;
+  }
+
+  .advatages__main-bg {
+    width: 250px;
+  }
+
+  .advatages__main-bg .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .advantages {
+    overflow: hidden;
+  }
+
+  .plate {
+    width: 106%;
+  }
+
+  .shedule {
+    overflow: hidden;
+  }
+
+  .shedule__img {
+    width: 806px;
+    max-width: none;
+  }
+
+  .shedule__img.hide-on-mobile {
+    margin-left: 30px;
+  }
+
+  .shedule__img.visible-on-mobile {
+    display: none;
+  }
+
+  .footer__img {
+    max-height: 390px;
+    object-fit: cover;
+  }
+
+  .footer__content {
+    flex-direction: row-reverse;
+  }
+
+  .footer__logo-img {
+    width: 100%;
+    max-width: 311px;
+  }
+
+  .footer__logo {
+    margin-bottom: 28px;
+  }
+
+  .footer__links {
+    grid-column-gap: 15.75px;
+    grid-row-gap: 15.75px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .footer__container {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .shedule__wrapper {
+    overflow: auto;
+  }
+
+  .recipes__img {
+    width: 100%;
+  }
+
+  .insta__wrapper {
+    margin: 0 60px;
+  }
+
+  .insta__info {
+    max-width: 234px;
+  }
+
+  .slick-slide .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not(.slick-cloned)
+    ~ .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1, 1);
+  }
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .noodle__advantage-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    margin-bottom: 40px;
+  }
+  .insta__slide {
+    margin: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: var(--fs-48);
+  }
+
+  .noodle__icon {
+    margin-bottom: 4px;
+  }
+
+  .noodle__title {
+    margin-bottom: 24px;
+  }
+
+  .hero__content {
+    justify-content: flex-start;
+    padding-top: 126px;
+  }
+
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__title {
+    margin-bottom: 14px;
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-20);
+    color: var(--f6-pink);
+    max-width: 236px;
+    margin-bottom: 20px;
+  }
+
+  .hero__img {
+    width: 115%;
+    max-width: 480px;
+    min-width: 370px;
+    right: 20px;
+  }
+
+  .hero .container {
+    overflow: hidden;
+    border-radius: 0 0 70px 70px;
+  }
+
+  .hero__content .button {
+    max-width: 100%;
+    padding: 16px 70px;
+  }
+
+  .noodle__bg {
+    display: none;
+  }
+
+  .loop__content svg {
+    width: 200%;
+  }
+
+  @keyframes move-logo {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+
+  .product {
+    padding: 60px 0 100px;
+  }
+
+  .noodle {
+    padding-bottom: 72px;
+  }
+
+  .advantages {
+    padding-bottom: 400px;
+  }
+
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .advantages__bg {
+    width: 400%;
+    object-fit: cover;
+  }
+
+  .advantages__container {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+
+  .advatages__main-bg {
+    width: 380px;
+  }
+
+  .recipes {
+    padding: 60px 0;
+  }
+
+  .recipes__noodles {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .recipes__recipe {
+    margin-right: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .recipes__img {
+    width: 100%;
+    height: 265px;
+  }
+
+  .recipes__img img {
+    width: 100%;
+  }
+
+  .recipes__name {
+    font-size: 28px;
+  }
+
+  .recipes__scroll-bar,
+  .shedule__img.hide-on-mobile {
+    display: none;
+  }
+
+  .shedule {
+    padding: 40px 0;
+  }
+
+  .shedule__img.visible-on-mobile {
+    margin-left: 30px;
+    display: block;
+  }
+
+  .insta__slider {
+    flex-direction: column;
+    padding-top: 0px;
+    padding-bottom: 0;
+  }
+
+  .insta__scrollbar {
+    margin: -60px auto 40px;
+    display: block;
+    width: 234px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #e2cfcf;
+  }
+
+  .insta__scroll {
+    display: flex;
+    align-items: center;
+    height: 6px;
+    width: 33%;
+    background-color: var(--red);
+    border-radius: 6px;
+    position: relative;
+    top: -3px;
+    transition: left 0.3s ease;
+  }
+
+  .insta__logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  .insta__logo-img {
+    display: flex;
+    width: 19px;
+  }
+
+  .insta__title {
+    font-size: 10px;
+  }
+
+  .insta__title.logo-name {
+    font-size: 9px;
+  }
+
+  .insta__counter-wrapper,
+  .insta__buttons {
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+  }
+  .insta__button {
+    margin-top: 0;
+  }
+  .insta__social {
+    width: 15px;
+    height: 15px;
+  }
+
+  .map__wrapper,
+  .map__preloader img {
+    height: 411px;
+    max-height: none;
+  }
+
+  .footer__content {
+    padding: 70px 40px;
+  }
+
+  .footer__container {
+    align-items: stretch;
+  }
+
+  .insta__logo-img {
+    width: 19px;
+    height: 8px;
+  }
+
+  .insta__info {
+    padding: 8px 12px;
+  }
+  .insta__info.top {
+    border-radius: 11px 11px 0 0;
+  }
+
+  .insta__info.bottom {
+    border-radius: 0 0 11px 11px;
+  }
+
+  .insta__wrapper {
+    margin: 0 24px;
+  }
+
+  .insta__top-title {
+    margin-bottom: -40px;
+  }
+
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.22, 1.22);
+  }
+
+  .insta__main-img {
+    border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.3, 1.3);
+  }
+}
+
+/* @media screen and (max-width: 350px) {
+  .slick-center .insta__main-img,
+  .slick-slide[aria-hidden="true"]:not([tabindex="-1"])
+    + .slick-cloned[aria-hidden="true"]
+    .insta__main-img {
+    transform: scale(1.4, 1.4);
+  }
+} */

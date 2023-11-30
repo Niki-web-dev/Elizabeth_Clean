@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "template-about": {
+      "type": "template-about",
+      "settings": {
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template-about",
+    "footer"
+  ]
+}
